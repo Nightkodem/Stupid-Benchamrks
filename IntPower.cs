@@ -13,7 +13,7 @@ public delegate ulong PowerMethod(ulong n, int pow);
 |    CppFastestPowerTest |  52.59 ns | 0.426 ns | 0.378 ns |         - | THE WINNER
 |          EasyPowerTest |  56.11 ns | 0.557 ns | 0.521 ns |         - |
 | EasyPowerRecursiveTest | 184.51 ns | 0.987 ns | 0.923 ns |         - |
- */
+*/
 
 [MemoryDiagnoser]
 public class IntPower
@@ -21,7 +21,7 @@ public class IntPower
     static readonly int Length = 16;
     static readonly ulong Prime = 31ul;
 
-    /*public void Test()
+    public void Test()
     {
         ulong[] bases = new ulong[] { 1ul, 4ul, 10ul, 135ul, 15ul };
         int[] powers = new int[] { 4, 6, 12, 3, 16 };
@@ -39,7 +39,7 @@ public class IntPower
             Console.WriteLine("======================================================");
 
         }
-    }*/
+    }
 
     [Benchmark]
     public ulong BuiltinPowerTest()
