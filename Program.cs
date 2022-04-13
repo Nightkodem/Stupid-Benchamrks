@@ -9,6 +9,6 @@ class Program
     {
         /*new IntPower().Test();
         Console.ReadLine();*/
-        var summary = BenchmarkRunner.Run<IntPower>();
+        var summary = BenchmarkRunner.Run<ArrayContains_Vs_HashSet>();
     }
 }
