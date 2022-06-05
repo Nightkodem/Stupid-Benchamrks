@@ -47,6 +47,11 @@ public class Contains
 
     public volatile bool contains = false;
 
+    public void Test()
+    {
+        Console.WriteLine(String.Join(' ', ArrRange10));
+    }
+
     [Benchmark]
     public void Enumerable10ContainsTest()
     {

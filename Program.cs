@@ -7,7 +7,7 @@ class Program
 {
     static void Main()
     {
-        /*new IntPower().Test();
+        /*new Contains().Test();
         Console.ReadLine();*/
         var summary = BenchmarkRunner.Run<Contains>();
     }
