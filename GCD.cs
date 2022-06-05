@@ -81,7 +81,7 @@ public class GCD
         return Caller(SteinGCDIterative);
     }
 
-    public int[] Caller(GCDMethod method)
+    public static int[] Caller(GCDMethod method)
     {
         int[] res = new int[a.Length * b.Length];
         for (int k = 0; k < Iterations; k++)
@@ -101,7 +101,7 @@ public class GCD
     }
 
 
-    public int BruteforceGCD(int a, int b)
+    public static int BruteforceGCD(int a, int b)
     {
         if (a == 0) return b;
         if (b == 0) return a;
@@ -114,13 +114,13 @@ public class GCD
         return max;
     }
 
-    public int EuclidesGCDRecursive(int a, int b)
+    public static int EuclidesGCDRecursive(int a, int b)
     {
         if (b == 0) return a;
         else return EuclidesGCDRecursive(b, a % b);
     }
 
-    public int EuclidesGCDIterative(int a, int b)
+    public static int EuclidesGCDIterative(int a, int b)
     {
         int divident = a;
         int divisor = b;
@@ -134,7 +134,7 @@ public class GCD
         return divident;
     }
 
-    public int EuclidesGCDIterativeNoAlloc(int a, int b) // THE WINNER
+    public static int EuclidesGCDIterativeNoAlloc(int a, int b) // THE WINNER
     {
         int temp;
         while (b > 0)
@@ -146,7 +146,7 @@ public class GCD
         return a;
     }
 
-    public int SteinGCDRecursive(int a, int b)
+    public static int SteinGCDRecursive(int a, int b)
     {
         if (a == b) return a;
         if (a == 0) return b;
@@ -165,7 +165,7 @@ public class GCD
         return SteinGCDRecursive((b - a) >> 1, a);
     }
 
-    public int SteinGCDIterative(int a, int b)
+    public static int SteinGCDIterative(int a, int b)
     {
         if (a == 0) return b;
         if (b == 0) return a;
